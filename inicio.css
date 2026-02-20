@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+}
+
+/* ================= NAVBAR PRO ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 50px;
+
+    background: rgba(26, 26, 26, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    position: sticky;
+    top: 0;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
+    z-index: 1000;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(45deg, #ffffff, #aaaaaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+
+    padding: 8px 14px;
+    border-radius: 6px;
+
+    font-size: 14.5px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover elegante */
+
+.menu a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Línea animada PRO */
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 4px;
+
+    width: 0%;
+    height: 2px;
+
+    background: linear-gradient(90deg, #28a745, #5cff85);
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+.menu a:hover::after {
+    width: 70%;
+}
+
+/* ================= HOME ================= */
+
+.home {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.home h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.home p {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* ================= GAME CARDS ================= */
+
+.games {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #28a745;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #aaa;
+    font-size: 14px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Dado</title>
+
+    <link rel="stylesheet" href="../inicio.css">
+    <link rel="stylesheet" href="./dado.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+        <div class="logo">🎮 Game Hub</div>
+
+        <div class="menu">
+            <a href="../inicio.html">🏠 Inicio</a>
+            <a href="../juego_dado/dado.html">🎲 Dado</a>
+            <a href="../juego_puzzle/puzzle.html">🧩 Puzzle</a>
+        </div>
+    </nav>
+
+    <!-- ================= CONFIGURACIÓN ================= -->
+
+    <div class="setup-panel">
+        <h2>⚙ Configurar Partida</h2>
+
+        <div class="setup-controls">
+            <div>
+                <label>Jugadores:</label>
+                <div class="custom-select" id="playerSelect">
+                    <div class="select-display">
+                        🎮 <span id="selectedPlayers">Seleccionar</span>
+                    </div>
+
+                    <div class="select-options" id="playerOptions"></div>
+                </div>
+
+            </div>
+
+            <div>
+                <label>Dinero Inicial:</label>
+                <input type="number" id="startMoney" value="100">
+            </div>
+
+            <button id="startGame">🎮 Iniciar Partida</button>
+        </div>
+    </div>
+
+        <!-- ================= REGLAS DEL JUEGO ================= -->
+
+    <div class="rules-panel">
+        <h2>📜 Reglas del Juego</h2>
+
+        <div class="rules-content">
+            <div class="rule">
+                <span>🎯</span>
+                <p>Todos los jugadores aportan una apuesta inicial al pozo.</p>
+            </div>
+
+            <div class="rule">
+                <span>🎲</span>
+                <p>En tu turno eliges cuánto apostar antes de lanzar el dado.</p>
+            </div>
+
+            <div class="rule">
+                <span>🏆</span>
+                <p>Ganas si tu tirada supera el valor actual del dado objetivo.</p>
+            </div>
+
+            <div class="rule">
+                <span>💀</span>
+                <p>Si pierdes, tu tirada se convierte en el nuevo dado objetivo.</p>
+            </div>
+
+            <div class="rule">
+                <span>💰</span>
+                <p>El ganador se lleva TODO el pozo.</p>
+            </div>
+
+            <div class="rule">
+                <span>🔁</span>
+                <p>Tras una victoria, el pozo se reinicia automáticamente.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= JUEGO ================= -->
+
+    <div class="game-container">
+
+        <div class="table-wrapper">
+
+            <!-- MESA -->
+            <div class="players-circle" id="playersCircle">
+                <div id="diceMessage" class="dice-message"></div>
+
+
+                <div class="center-dice">
+                    🎲 <span id="targetDice">-</span>
+                </div>
+
+            </div>
+
+            <!-- PANEL -->
+            <div class="panel">
+                <h1>🎲 Mesa de Dado</h1>
+
+                <div class="info">
+                    <div>Pozo <span id="pot">0</span></div>
+                    <div>Turno <span id="turn"></span></div>
+                </div>
+
+                <div class="bet-control">
+                    <label>Apuesta:</label>
+                    <input type="number" id="betAmount" value="10">
+                </div>
+
+
+                <div class="controls">
+                    <button id="btnIr">IR</button>
+                    <button id="btnPasar">PASAR</button>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- REGISTRO -->
+        <div class="log-panel">
+            <h3>📜 Registro</h3>
+            <div class="log" id="log"></div>
+        </div>
+
+    </div>
+
+
+
+<!-- ✅ IMPORTANTE → Ruta correcta -->
+<script type="module" src="./js/main.js"></script>
+
+
+
+
+</body>
+</html>
